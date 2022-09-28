@@ -1,6 +1,0 @@
-id,type,title,description,status,duration,startTime,endTime,epic
-1,TASK,Продать авто,продать,NEW,PT30M,2022-09-25T13:30:15,2022-09-25T14:00:15
-2,TASK,Потратиться на себя,Сделать себе приятно,NEW,PT45M,2022-09-26T12:00:15,2022-09-26T12:45:15
-3,EPIC,Пройти курс Java-разработчик,пройти все спринты,NEW,null,null,null
-
-1,3
