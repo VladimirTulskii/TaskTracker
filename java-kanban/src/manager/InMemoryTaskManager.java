@@ -14,15 +14,6 @@ public class InMemoryTaskManager implements TaskManager {
     protected Map<Integer, Epic> epics = new HashMap<>();
     protected Map<Integer, Subtask> subtasks = new HashMap<>();
 
-    /**
-     * если у обоих объектов startTime == null, то сравниваем по id
-     * затем сравниваем если у одного из элементов startTime == null
-     * далее сравниваем, если startTime у обоих объектов не null
-     * Если startTime равны, то сортируем по id
-     *
-     * тест void getPrioritizedTasksTest() учитывает различные сценарии, сортировка выполняется корректно:
-     * сначала по времени, в конце объекты без startTime в порядке возрастания id
-     */
     protected Set<Task> prioritizedTasks = new TreeSet<>((o1, o2) -> {
         if (o1.getStartTime() == null && o2.getStartTime() == null) return o1.getId() - o2.getId();
         if (o1.getStartTime() == null) return 1;
